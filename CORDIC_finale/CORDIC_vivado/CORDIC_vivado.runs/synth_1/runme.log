@@ -1,0 +1,486 @@
+
+*** Running vivado
+    with args -log finalBox.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source finalBox.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source finalBox.tcl -notrace
+Command: synth_design -top finalBox -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 49100 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 357.820 ; gain = 99.777
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'finalBox' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:24]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'Xbox' declared at 'C:/Users/nicom/Desktop/CORDIC/Xbox.vhd:5' bound to instance 'Xbox_map' of component 'Xbox' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'Xbox' [C:/Users/nicom/Desktop/CORDIC/Xbox.vhd:24]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'mux' declared at 'C:/Users/nicom/Desktop/CORDIC/mux.vhd:4' bound to instance 'mux_map' of component 'mux' [C:/Users/nicom/Desktop/CORDIC/Xbox.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'mux' [C:/Users/nicom/Desktop/CORDIC/mux.vhd:14]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux' (1#1) [C:/Users/nicom/Desktop/CORDIC/mux.vhd:14]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'DFF_N_noReset' declared at 'C:/Users/nicom/Desktop/CORDIC/DFF_N _noReset.vhd:5' bound to instance 'DFF_N_noReset_map' of component 'DFF_N_noReset' [C:/Users/nicom/Desktop/CORDIC/Xbox.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'DFF_N_noReset' [C:/Users/nicom/Desktop/CORDIC/DFF_N _noReset.vhd:20]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DFF_N_noReset' (2#1) [C:/Users/nicom/Desktop/CORDIC/DFF_N _noReset.vhd:20]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'shiftRight_i' declared at 'C:/Users/nicom/Desktop/CORDIC/shift_i.vhd:6' bound to instance 'shiftRight_i_map' of component 'shiftRight_i' [C:/Users/nicom/Desktop/CORDIC/Xbox.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'shiftRight_i' [C:/Users/nicom/Desktop/CORDIC/shift_i.vhd:19]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shiftRight_i' (3#1) [C:/Users/nicom/Desktop/CORDIC/shift_i.vhd:19]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'addSub_N' declared at 'C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:5' bound to instance 'addsub_N_map' of component 'addsub_N' [C:/Users/nicom/Desktop/CORDIC/Xbox.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'addSub_N' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:25]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'fullAdder' (4#1) [C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:20]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'addSub_N' (5#1) [C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'Xbox' (6#1) [C:/Users/nicom/Desktop/CORDIC/Xbox.vhd:24]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'Ybox' declared at 'C:/Users/nicom/Desktop/CORDIC/Ybox.vhd:5' bound to instance 'Ybox_map' of component 'Ybox' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'Ybox' [C:/Users/nicom/Desktop/CORDIC/Ybox.vhd:23]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'mux' declared at 'C:/Users/nicom/Desktop/CORDIC/mux.vhd:4' bound to instance 'mux_map' of component 'mux' [C:/Users/nicom/Desktop/CORDIC/Ybox.vhd:94]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'DFF_N_noReset' declared at 'C:/Users/nicom/Desktop/CORDIC/DFF_N _noReset.vhd:5' bound to instance 'DFF_N_noReset_map' of component 'DFF_N_noReset' [C:/Users/nicom/Desktop/CORDIC/Ybox.vhd:103]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'shiftRight_i' declared at 'C:/Users/nicom/Desktop/CORDIC/shift_i.vhd:6' bound to instance 'shiftRight_i_map' of component 'shiftRight_i' [C:/Users/nicom/Desktop/CORDIC/Ybox.vhd:114]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'addSub_N' declared at 'C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:5' bound to instance 'addsub_N_map' of component 'addsub_N' [C:/Users/nicom/Desktop/CORDIC/Ybox.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'Ybox' (7#1) [C:/Users/nicom/Desktop/CORDIC/Ybox.vhd:23]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'Zbox' declared at 'C:/Users/nicom/Desktop/CORDIC/Zbox.vhd:5' bound to instance 'Zbox_map' of component 'Zbox' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'Zbox' [C:/Users/nicom/Desktop/CORDIC/Zbox.vhd:21]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'cordic_lut_16' declared at 'C:/Users/nicom/Desktop/CORDIC/cordic_lut_16.vhd:6' bound to instance 'cordic_lut_16_map' of component 'cordic_lut_16' [C:/Users/nicom/Desktop/CORDIC/Zbox.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'cordic_lut_16' [C:/Users/nicom/Desktop/CORDIC/cordic_lut_16.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'cordic_lut_16' (8#1) [C:/Users/nicom/Desktop/CORDIC/cordic_lut_16.vhd:15]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'DFF_N' declared at 'C:/Users/nicom/Desktop/CORDIC/DFF_N.vhd:5' bound to instance 'DFF_N_map' of component 'DFF_N' [C:/Users/nicom/Desktop/CORDIC/Zbox.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'DFF_N' [C:/Users/nicom/Desktop/CORDIC/DFF_N.vhd:20]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DFF_N' (9#1) [C:/Users/nicom/Desktop/CORDIC/DFF_N.vhd:20]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'addSub_N' declared at 'C:/Users/nicom/Desktop/CORDIC/addsub_N.vhd:5' bound to instance 'addsub_N_map' of component 'addsub_N' [C:/Users/nicom/Desktop/CORDIC/Zbox.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'Zbox' (10#1) [C:/Users/nicom/Desktop/CORDIC/Zbox.vhd:21]
+	Parameter M bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'Counter' declared at 'C:/Users/nicom/Desktop/CORDIC/Counter.vhd:5' bound to instance 'Counter_map' of component 'Counter' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'Counter' [C:/Users/nicom/Desktop/CORDIC/Counter.vhd:19]
+	Parameter M bound to: 3 - type: integer 
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'fullAdder_N' declared at 'C:/Users/nicom/Desktop/CORDIC/fullAdder_N.vhd:5' bound to instance 'FULL_ADDER_N_MAP' of component 'fullAdder_N' [C:/Users/nicom/Desktop/CORDIC/Counter.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'fullAdder_N' [C:/Users/nicom/Desktop/CORDIC/fullAdder_N.vhd:21]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/fullAdder_N.vhd:53]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/fullAdder_N.vhd:53]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/nicom/Desktop/CORDIC/full_adder.vhd:5' bound to instance 'i_full_adder' of component 'fullAdder' [C:/Users/nicom/Desktop/CORDIC/fullAdder_N.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'fullAdder_N' (11#1) [C:/Users/nicom/Desktop/CORDIC/fullAdder_N.vhd:21]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'DFF_N' declared at 'C:/Users/nicom/Desktop/CORDIC/DFF_N.vhd:5' bound to instance 'DFF_N_MAP' of component 'DFF_N' [C:/Users/nicom/Desktop/CORDIC/Counter.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'DFF_N__parameterized1' [C:/Users/nicom/Desktop/CORDIC/DFF_N.vhd:20]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DFF_N__parameterized1' (11#1) [C:/Users/nicom/Desktop/CORDIC/DFF_N.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'Counter' (12#1) [C:/Users/nicom/Desktop/CORDIC/Counter.vhd:19]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/Users/nicom/Desktop/CORDIC/multiplier.vhd:5' bound to instance 'mul' of component 'multiplier' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'multiplier' [C:/Users/nicom/Desktop/CORDIC/multiplier.vhd:16]
+	Parameter N bound to: 16 - type: integer 
+	Parameter M bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier' (13#1) [C:/Users/nicom/Desktop/CORDIC/multiplier.vhd:16]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'DFF_N_en' declared at 'C:/Users/nicom/Desktop/CORDIC/DFF_N_en.vhd:5' bound to instance 'rho_DFF_N' of component 'DFF_N_en' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'DFF_N_en' [C:/Users/nicom/Desktop/CORDIC/DFF_N_en.vhd:22]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DFF_N_en' (14#1) [C:/Users/nicom/Desktop/CORDIC/DFF_N_en.vhd:22]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'DFF_N_en' declared at 'C:/Users/nicom/Desktop/CORDIC/DFF_N_en.vhd:5' bound to instance 'theta_DFF_N' of component 'DFF_N_en' [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:198]
+INFO: [Synth 8-256] done synthesizing module 'finalBox' (15#1) [C:/Users/nicom/Desktop/CORDIC/finalBox.vhd:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 412.555 ; gain = 154.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 412.555 ; gain = 154.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 412.555 ; gain = 154.512
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/nicom/Desktop/CORDIC_vivado/CORDIC_vivado.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/nicom/Desktop/CORDIC_vivado/CORDIC_vivado.srcs/constrs_1/new/constraints.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 750.840 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 750.840 ; gain = 492.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 750.840 ; gain = 492.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 750.840 ; gain = 492.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "en_reg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 750.840 ; gain = 492.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 51    
+	   2 Input      1 Bit         XORs := 57    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 6     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module finalBox 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module DFF_N_noReset 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module fullAdder 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module addSub_N 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 19    
+Module cordic_lut_16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+Module DFF_N 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module DFF_N__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module DFF_N_en 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP mul/o, operation Mode is: A*(B:0x9b).
+DSP Report: operator mul/o is absorbed into DSP mul/o.
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[15]' (FDCE) to 'theta_DFF_N/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[16]' (FDCE) to 'theta_DFF_N/q_reg[17]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[17]' (FDCE) to 'theta_DFF_N/q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[18]' (FDCE) to 'theta_DFF_N/q_reg[19]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[19]' (FDCE) to 'theta_DFF_N/q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[20]' (FDCE) to 'theta_DFF_N/q_reg[21]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[21]' (FDCE) to 'theta_DFF_N/q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[22]' (FDCE) to 'theta_DFF_N/q_reg[23]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[23]' (FDCE) to 'theta_DFF_N/q_reg[24]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[24]' (FDCE) to 'theta_DFF_N/q_reg[25]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[25]' (FDCE) to 'theta_DFF_N/q_reg[26]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[26]' (FDCE) to 'theta_DFF_N/q_reg[27]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[27]' (FDCE) to 'theta_DFF_N/q_reg[28]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[28]' (FDCE) to 'theta_DFF_N/q_reg[29]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[29]' (FDCE) to 'theta_DFF_N/q_reg[30]'
+INFO: [Synth 8-3886] merging instance 'theta_DFF_N/q_reg[30]' (FDCE) to 'theta_DFF_N/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'rho_DFF_N/q_reg[24]' (FDCE) to 'rho_DFF_N/q_reg[25]'
+INFO: [Synth 8-3886] merging instance 'rho_DFF_N/q_reg[25]' (FDCE) to 'rho_DFF_N/q_reg[26]'
+INFO: [Synth 8-3886] merging instance 'rho_DFF_N/q_reg[26]' (FDCE) to 'rho_DFF_N/q_reg[27]'
+INFO: [Synth 8-3886] merging instance 'rho_DFF_N/q_reg[27]' (FDCE) to 'rho_DFF_N/q_reg[28]'
+INFO: [Synth 8-3886] merging instance 'rho_DFF_N/q_reg[28]' (FDCE) to 'rho_DFF_N/q_reg[29]'
+INFO: [Synth 8-3886] merging instance 'rho_DFF_N/q_reg[29]' (FDCE) to 'rho_DFF_N/q_reg[30]'
+INFO: [Synth 8-3886] merging instance 'rho_DFF_N/q_reg[30]' (FDCE) to 'rho_DFF_N/q_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rho_DFF_N/q_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (rho_DFF_N/q_reg[31]) is unused and will be removed from module finalBox.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 750.840 ; gain = 492.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplier  | A*(B:0x9b)  | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 792.887 ; gain = 534.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/nicom/Desktop/CORDIC/DFF_N_en.vhd:29]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |DSP48E1 |     1|
+|3     |LUT1    |     2|
+|4     |LUT2    |    91|
+|5     |LUT3    |    46|
+|6     |LUT4    |     6|
+|7     |LUT5    |    76|
+|8     |LUT6    |    78|
+|9     |FDCE    |    71|
+|10    |FDPE    |    32|
+|11    |LDC     |    32|
+|12    |IBUF    |    34|
+|13    |OBUF    |    65|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------------------+----------------------+------+
+|      |Instance              |Module                |Cells |
++------+----------------------+----------------------+------+
+|1     |top                   |                      |   535|
+|2     |  Counter_map         |Counter               |    27|
+|3     |    DFF_N_MAP         |DFF_N__parameterized1 |    27|
+|4     |  Xbox_map            |Xbox                  |   151|
+|5     |    DFF_N_noReset_map |DFF_N_noReset_0       |   151|
+|6     |  Ybox_map            |Ybox                  |   190|
+|7     |    DFF_N_noReset_map |DFF_N_noReset         |   190|
+|8     |  Zbox_map            |Zbox                  |    20|
+|9     |    DFF_N_map         |DFF_N                 |    20|
+|10    |  mul                 |multiplier            |    25|
+|11    |  theta_DFF_N         |DFF_N_en              |    17|
++------+----------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 920.066 ; gain = 662.023
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 920.066 ; gain = 323.738
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 920.066 ; gain = 662.023
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  LDC => LDCE: 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+109 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 920.066 ; gain = 675.039
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nicom/Desktop/CORDIC_vivado/CORDIC_vivado.runs/synth_1/finalBox.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file finalBox_utilization_synth.rpt -pb finalBox_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 920.066 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 30 18:18:53 2018...

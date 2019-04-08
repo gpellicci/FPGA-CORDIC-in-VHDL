@@ -1,0 +1,220 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Dec 30 18:29:52 2018
+| Host         : LAPTOP-QQKB7PCL running 64-bit major release  (build 9200)
+| Command      : report_drc -file finalBox_drc_routed.rpt -pb finalBox_drc_routed.pb -rpx finalBox_drc_routed.rpx
+| Design       : finalBox
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 36
++----------+------------------+----------------------------+------------+
+| Rule     | Severity         | Description                | Violations |
++----------+------------------+----------------------------+------------+
+| UCIO-1   | Critical Warning | Unconstrained Logical Port | 1          |
+| DPIP-1   | Warning          | Input pipelining           | 1          |
+| DPOP-2   | Warning          | MREG Output pipelining     | 1          |
+| PDRC-153 | Warning          | Gated clock check          | 32         |
+| ZPS7-1   | Warning          | PS7 block required         | 1          |
++----------+------------------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+99 out of 99 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: rho[31:0], theta[31:0], x[15:0], y[15:0], clk, data_valid, rst_low.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP mul/o input mul/o/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP mul/o multiplier stage mul/o/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[0]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[10]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[10]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[10]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[11]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[11]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[11]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[12]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[12]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[12]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[13]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[13]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[13]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[14]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[14]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[14]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[15]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[15]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[15]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[1]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[1]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[1]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[2]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[2]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[2]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[3]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[3]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[4]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[4]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[4]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[5]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[5]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[5]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[6]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[6]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[6]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[7]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[7]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[7]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[8]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[8]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[8]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net Xbox_map/DFF_N_noReset_map/q_reg[9]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Xbox_map/DFF_N_noReset_map/q_reg[9]_LDC_i_1__0/O, cell Xbox_map/DFF_N_noReset_map/q_reg[9]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[0]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[10]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[11]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[12]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[13]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[13]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[14]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[15]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[1]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[2]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[3]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[4]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[5]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[6]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[7]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[8]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net Ybox_map/DFF_N_noReset_map/q_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Ybox_map/DFF_N_noReset_map/q_reg[9]_LDC_i_1/O, cell Ybox_map/DFF_N_noReset_map/q_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
